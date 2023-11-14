@@ -907,9 +907,9 @@ PRODUCT_PACKAGES += ShannonRcs
 
 ifeq (,$(filter aosp_% factory_%,$(TARGET_PRODUCT)))
 #ImsMediaAoc library
-FEATURE_TYPE := oem_audio
-SOONG_CONFIG_NAMESPACES += audio_lib
-SOONG_CONFIG_audio_lib += \
+#FEATURE_TYPE := oem_audio
+#SOONG_CONFIG_NAMESPACES += audio_lib
+#SOONG_CONFIG_audio_lib += \
         audio_type
 
 SOONG_CONFIG_audio_lib_audio_type := $(FEATURE_TYPE)
@@ -1021,7 +1021,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.config.vc_call_vol_steps=7 \
-	ro.config.media_vol_steps=25 \
 	ro.audio.monitorRotation = true \
 	ro.audio.offload_wakelock=false
 
